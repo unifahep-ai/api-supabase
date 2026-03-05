@@ -95,3 +95,68 @@ curl -X POST '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/document_require
 ### Deletar Requisito (DELETE)
 ```bash
 curl -X DELETE '
+
+
+
+---
+
+## 4. Documentos (`documents`)
+
+### Listar Documentos (GET)
+```bash
+curl -X GET '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents?select=](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents?select=)*' \
+-H "apikey: SEU_SUPABASE_ANON_KEY"
+```
+
+### Criar Documento (POST)
+```bash
+curl -X POST '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents)' \
+-H "apikey: SEU_SUPABASE_ANON_KEY" \
+-H "Content-Type: application/json" \
+-H "Prefer: return=minimal" \
+-d '{
+  "owner_id": "UUID_DO_PERFIL",
+  "requirement_id": "UUID_DO_REQUISITO",
+  "name": "rg_frente.pdf",
+  "type": "application/pdf",
+  "file_url": "https://url-do-bucket-storage",
+  "ai_metadata": {"ocr_extracted": true, "confidence": 0.95},
+  "observacao": "Documento legível"
+}'
+```
+
+### Deletar Documento (DELETE)
+```bash
+curl -X DELETE '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents?id=eq.COLOQUE_O_UUID_AQUI](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/documents?id=eq.COLOQUE_O_UUID_AQUI)' \
+-H "apikey: SEU_SUPABASE_ANON_KEY"
+```
+
+---
+
+## 5. Logs de Auditoria (`audit_logs`)
+
+### Listar Logs (GET)
+```bash
+curl -X GET '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs?select=](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs?select=)*' \
+-H "apikey: SEU_SUPABASE_ANON_KEY"
+```
+
+### Criar Log de Auditoria (POST)
+```bash
+curl -X POST '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs)' \
+-H "apikey: SEU_SUPABASE_ANON_KEY" \
+-H "Content-Type: application/json" \
+-H "Prefer: return=minimal" \
+-d '{
+  "actor_id": "UUID_DO_ATENDENTE_OU_SISTEMA",
+  "action": "DOCUMENT_APPROVED",
+  "details": "O documento de identidade foi aprovado manualmente.",
+  "aluno_id": "UUID_DO_ALUNO"
+}'
+```
+
+### Deletar Log (DELETE)
+```bash
+curl -X DELETE '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs?id=eq.COLOQUE_O_UUID_AQUI](https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/audit_logs?id=eq.COLOQUE_O_UUID_AQUI)' \
+-H "apikey: SEU_SUPABASE_ANON_KEY"
+```
