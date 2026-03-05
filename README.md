@@ -92,13 +92,6 @@ curl -X POST '[https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/document_require
 }'
 ```
 
-### Deletar Requisito (DELETE)
-```bash
-curl -X DELETE '
-
-
-
----
 
 ## 4. Documentos (`documents`)
 
