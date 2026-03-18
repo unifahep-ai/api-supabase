@@ -2,7 +2,6 @@
 
 ## Autenticação e Headers Padrão
 Todas as requisições exigem o seguinte cabeçalho:
-* `apikey`
 * `Authorization`
 
 ---
@@ -21,7 +20,6 @@ Essa documentação foi criada especificamente para criação e listagem de docu
 ```bash
 curl -L -X POST 'https://xynvcqxugvkmpxrmpsfv.supabase.co/functions/v1/upload-doc' \
   -H 'Authorization: Bearer ' \
-  -H 'apikey: ' \
   -F 'user_fullname=José da Silva' \
   -F 'user_cpf=01234567890' \
   -F 'user_rg=0123456789' \
@@ -33,12 +31,10 @@ curl -L -X POST 'https://xynvcqxugvkmpxrmpsfv.supabase.co/functions/v1/upload-do
 ### Listar todos (GET)
 ```bash
 curl -L -X GET 'https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/user_and_doc?select=*' \
-  -H 'Authorization: Bearer ' \
-  -H 'apikey: '
+  -H 'Authorization: Bearer '
 ```
 ### Filtrar por cpf (GET)
 ```bash
 curl -L -X GET 'https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/user_and_doc?user_cpf=eq.01234567890&select=*' \
-  -H 'Authorization: Bearer ' \
-  -H 'apikey: '
+  -H 'Authorization: Bearer '
 ```
