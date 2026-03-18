@@ -11,7 +11,7 @@ Todas as requisições exigem o seguinte cabeçalho:
 ## 1. user_and_doc (`criado especificamente para analise via API`)
 Essa documentação foi criada especificamente para criação e listagem de documentos verificados via API.
 
-**como funciona: ** 
+**como funciona:** 
 - Primeiro é feito a inserção dos dados
 - Após isso ele passa pela analise (que pode levar de 2 a 5 minutos)
 - Depois é possivel fazer um get e pegar as informações (risco, ai_metadata, etc...)
