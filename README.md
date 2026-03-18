@@ -1,10 +1,9 @@
 # Documentação da API REST - Supabase
 
-**URL Base:** `https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/`
-
 ## Autenticação e Headers Padrão
 Todas as requisições exigem o seguinte cabeçalho:
-* `apikey`: Sua chave pública anônima (anon key).
+* `apikey`
+* `Authorization`
 
 ---
 
