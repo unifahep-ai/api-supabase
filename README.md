@@ -21,8 +21,8 @@ Essa documentação foi criada especificamente para criação e listagem de docu
 ### Criar user_and_doc (POST)
 ```bash
 curl -L -X POST 'https://xynvcqxugvkmpxrmpsfv.supabase.co/functions/v1/upload-doc' \
-  -H 'Authorization: Bearer sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU' \
-  -H 'apikey: sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU' \
+  -H 'Authorization: Bearer ' \
+  -H 'apikey: ' \
   -F 'user_fullname=José da Silva' \
   -F 'user_cpf=01234567890' \
   -F 'user_rg=0123456789' \
@@ -34,12 +34,12 @@ curl -L -X POST 'https://xynvcqxugvkmpxrmpsfv.supabase.co/functions/v1/upload-do
 ### Listar todos (GET)
 ```bash
 curl -L -X GET 'https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/user_and_doc?select=*' \
-  -H 'Authorization: Bearer sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU' \
-  -H 'apikey: sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU'
+  -H 'Authorization: Bearer ' \
+  -H 'apikey: '
 ```
 ### Filtrar por cpf (GET)
 ```bash
 curl -L -X GET 'https://xynvcqxugvkmpxrmpsfv.supabase.co/rest/v1/user_and_doc?user_cpf=eq.01234567890&select=*' \
-  -H 'Authorization: Bearer sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU' \
-  -H 'apikey: sb_publishable_V0B7sMBqWbJXF7T3fUy1YQ_eaJAxfyU'
+  -H 'Authorization: Bearer ' \
+  -H 'apikey: '
 ```
