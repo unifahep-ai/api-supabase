@@ -26,6 +26,7 @@ curl -L -X POST 'https://xynvcqxugvkmpxrmpsfv.supabase.co/functions/v1/upload-do
   -F 'doc_type=RG_Frente' \
   -F 'user_address=avenida beira mar' \
   -F 'document=@/caminho/para/sua/imagem.jpg'
+  -F 'document_base64=code'
 ```
 
 ### Listar todos (GET)
